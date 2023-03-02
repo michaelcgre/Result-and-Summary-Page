@@ -2,6 +2,7 @@ html {
     font-size: 18px;
 }
 
+/* Result and Summary */
 .resultandsummary {
     display: flex;
     justify-content: center;
@@ -10,6 +11,7 @@ html {
     font-family: "Hanken Grotesk";
 }
 
+/* Result */
 .result {
     background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
     text-align: center;
@@ -50,6 +52,7 @@ html {
     color: lightgrey;
 }
 
+/* Summary */
 .summary {
     padding: 0 2rem;
     background-color: white;
@@ -84,9 +87,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: hsla(0, 100%, 67%, .1);
-
-
+    background-color: hsla(0, 100%, 67%, .1)
 }
 
 .memoryflex {
@@ -94,8 +95,6 @@ html {
     justify-content: space-between;
     align-items: center;
     background-color: hsla(39, 100%, 56%, .1);
-
-
 }
 
 .verbalflex {
@@ -112,13 +111,13 @@ html {
     justify-content: space-between;
     align-items: center;
     background-color: hsla(234, 85%, 45%, .1);
-    width: 15rem;
 }
 
 .category {
     padding: 0 1rem;
     margin: .8rem 0;
     border-radius: 5% / 10%;
+    width: 12rem;
 }
 
 .logos {
@@ -131,10 +130,71 @@ html {
 
 .summary button {
     background-color: hsl(224, 30%, 27%);
-    padding: 1rem 6.2rem;
+    padding: 1rem 5rem;
     border-radius: 10% / 50%;
     color: white;
     font-weight: 700;
     font-size: 1rem;
     margin-top: 1rem;
+    border: none;
+}
+
+.summary button:hover {
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 575px) {
+    .resultandsummary {
+        display: block;
+    }
+
+    .result {
+        max-width: 35ch;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+
+    .result h1{
+        font-size: 1rem;
+        margin-top: -.5rem;
+        padding-top: 1.5rem;
+    }
+
+    .bignum  {
+        font-size: 2.5rem;
+    }
+
+    .summary {
+        box-shadow: none;
+        padding-right: 0;
+    }
+
+    .summary h2 {
+        font-size: 1rem;
+    }
+
+    .category {
+        width: 15rem;
+        margin-bottom: 1rem;
+    }
+
+    .summary button {
+        width: 17rem;
+        margin-top: .5rem;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    .actualresult {
+        width: 7rem;
+        padding: .5rem 0;
+    }
+
+    .attribution {
+        display: none;
+    }
 }
